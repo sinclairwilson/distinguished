@@ -1,15 +1,15 @@
 class CarRentalCompany:
     def __init__(self):
-        self.cars = []
+        self.cars = [] # Define List to hold Cars held by company
 
-    def add_car(self, car):
+    def add_car(self, car): # Function to add car to List
         self.cars.append(car)
 
-    def matching_cars(self, criteria):
+    def matching_cars(self, criteria): # Function to check matching status of cars
         return self.cars
 
     def rent_car(self, renter, car):
-        pass
+        pass # Do nothing
 
     def return_car(self, renter, car):
-        pass
+        pass # Do nothing

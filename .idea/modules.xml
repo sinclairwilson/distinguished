@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../car-rental-python/.idea/car-rental-python-ws.iml" filepath="$PROJECT_DIR$/../car-rental-python/.idea/car-rental-python-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/distinguished.iml" filepath="$PROJECT_DIR$/.idea/distinguished.iml" />
     </modules>
   </component>
