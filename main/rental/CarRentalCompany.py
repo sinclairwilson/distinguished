@@ -6,6 +6,9 @@ class CarRentalCompany:
         self.cars.append(car)
 
     def matching_cars(self, criteria): # Function to check matching status of cars
+
+        # Iterate through list type matching criteria
+
         return self.cars
 
     def rent_car(self, renter, car):
