@@ -1,4 +1,4 @@
-# car-rental-python
+# Car Rental System
 
 ### Description
 
