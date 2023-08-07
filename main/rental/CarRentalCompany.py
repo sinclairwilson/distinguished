@@ -16,11 +16,14 @@ class CarRentalCompany:
 
         return matching_list
 
-    def rent_car(self, renter, car):
-        self.rentals.append(renter,car)
-        pass # Do nothing
+    def rent_car(self, renter, car, timeperiod):
+        # Add car to rentals list
+        self.rentals.append(renter,car, timeperiod)
+        return rentals
 
-    def return_car(self, renter, car):
-        # Remove care from rentals list
+    def return_car(self, renter, car, timeperiod):
+        # Remove car from rentals list
         # Move car to cars available list
-        pass # Do nothing
+        self.rentals.remove(car)
+        self.cars.append
+        return rentals

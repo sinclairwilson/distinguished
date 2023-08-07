@@ -39,7 +39,7 @@ from threading
 
 # Criteria would likely come from web or mobile app - criteria are Rental Group
 # This first stage query does not consider the availability of the cars in time
-# rental_group would be set by user interface
+# rental_group would be set by user interface - Story 1
 
         criteria = Criteria()
         cars_available = car_rental_company.matching_cars(rental_group, NULL, NULL)
@@ -47,7 +47,14 @@ from threading
 
 
 # Need to create a permanent record of what cars and what renters are booked out against a day
-# Create a list of records that is [CAR, RENTER, START_DATE, END_DATE]
+# Create a list of records that is [CAR, RENTER, START_DATE, END_DATE] - Story 2 and 3
+# START_DATE, END_DATE are assumed to be of type timeperiod
+
+
+
+
+
+
 
 
 
