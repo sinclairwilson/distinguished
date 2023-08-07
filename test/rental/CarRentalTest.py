@@ -19,13 +19,29 @@ class CarRentalTest(unittest.TestCase):
     RENTER4 = Renter("Carbon", "Greta", "CARBO010497GX8NM", date(1997, 4, 1))
 
     def test_list_cars_available_to_rent_gives_more_than_one_car(self):
+
+
         car_rental_company = CarRentalCompany()
-        car_rental_company.add_car(self.CAR1)
-        car_rental_company.add_car(self.CAR2)
-        car_rental_company.add_car(self.CAR3)
-        car_rental_company.add_car(self.CAR4)
+
+        # Although modern Python 3.x list management is thread safe better to be safe than sorry
+        # Acquire lock and carry out updates in block with lock
+
+        lock = threading.Lock()
+
+        with lock:
+            car_rental_company.add_car(self.CAR1)
+            car_rental_company.add_car(self.CAR2)
+            car_rental_company.add_car(self.CAR3)
+            car_rental_company.add_car(self.CAR4)
+
+
+        # Criteria would likely come from web or mobile app - criteria are Rental Group
+        # This first stage query does not consider the availability of the cars in time
+        # rental_group would be set by user interface
 
         criteria = Criteria()
-        cars_available = car_rental_company.matching_cars(criteria)
+        cars_available = car_rental_company.matching_cars(rental_group, NULL, NULL)
+
+
 
         self.assertGreater(len(cars_available), 1)

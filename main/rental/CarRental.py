@@ -37,6 +37,18 @@ from threading
         car_rental_company.add_car(self.CAR3)
         car_rental_company.add_car(self.CAR4)
 
+# Criteria would likely come from web or mobile app - criteria are Rental Group
+# This first stage query does not consider the availability of the cars in time
+# rental_group would be set by user interface
+
         criteria = Criteria()
-        cars_available = car_rental_company.matching_cars(criteria)
+        cars_available = car_rental_company.matching_cars(rental_group, NULL, NULL)
+
+
+
+# Need to create a permanent record of what cars and what renters are booked out against a day
+# Create a list of records that is [CAR, RENTER, START_DATE, END_DATE]
+
+
+
 

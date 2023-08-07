@@ -1,4 +1,10 @@
-# Car Rental System - 6-8-23
+# Car Rental System
+
+Developer: Wilson Sinclair 
+
+[wilson.sinclair@gmail.com](mailto:wilson.sinclair@gmail.com)
+
+Last Update: 7-8-23
 
 ### Description
 
@@ -31,3 +37,13 @@ This will provide a car available to me during the rental period
 ***
 
 ### Technical Implementation Details
+
+#### 1. Data Model
+
+As this is a iterative project, Python data types have been used to create a Minimum Viable Product (MVP)
+to demonstrate the initial design.
+
+| Class Name | Description   | Field Names                                                  | filename  |
+|------------|---------------|--------------------------------------------------------------|-----------
+| Car        | Rental car    | Make,Model,Registration Number, Rental Type, Cost Per Day    | Car.py    |
+| Renter     | Renter of car | Last Name, First Name, Driving Licence Number, Data of Birth | Renter.py |
